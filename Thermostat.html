@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Thermostat</title>
-   <audio controls autoplay>
-    <source src="Aesthetic.mp3" type="audio/mp3">
-  </audio>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src='src/Thermostat.js'></script>
-  <script src='src/jQuery.js'></script>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8">
+    <title>Thermostat</title>
+     <audio controls autoplay>
+      <source src="Aesthetic.mp3" type="audio/mp3">
+    </audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='src/Thermostat.js'></script>
+    <script src='src/jQuery.js'></script>
+    <link rel="stylesheet" href="style.css">
 
-</head>
-<body>
-  <section>
-    <div class="display">
-      <h1>Current temperature: <span id="current-temperature"></span>&deg;C</h1>
-      <h1>Weather Condition: <span id="current-weather"></span></h1>
+  </head>
+  <body>
+    <section>
+      <div class="display">
+        <h1>Current temperature: <span id="current-temperature"></span>&deg;C</h1>
+        <h1>Weather Condition: <span id="current-weather"></span></h1>
         <span id="current-weather-icon"></span>
         <form id="select-city" >
-        <label for="city">
-          Enter City :
-          <input id="city" type="text" name="city">
-        </label>
-        <input type="submit" value="Submit">
-      </form>
-      <h1>Thermostat</h1>
-      <div id="temperature">
-        <h3>Temperature</h3>
-        <p>20</p>
-        <progress id="temperature-progress" value="10" max="22"></progress>
+          <label for="city">
+            Enter City:
+            <input id="city" type="text" name="city">
+          </label>
+          <input type="submit" value="Submit">
+        </form>
+        <h1>Thermostat</h1>
+        <div id="temperature">
+          <h3>Temperature</h3>
+          <p>20</p>
+          <progress id="temperature-progress" value="10" max="22"></progress>
+        </div>
+        <div id="power_saving">
+          <h3>Power Saving Mode</h3>
+          <p>On</p>
+        </div>
+        <div id="energy" class="Medium">
+          <h3>Energy usage</h3>
+          <p>Medium</p>
+        </div>
       </div>
-      <div id="power_saving">
-        <h3>Power Saving Mode</h3>
-        <p>On</p>
+      <div class="control">
+        <button type="button" id="temp-up">Increase temperature</button>
+        <button type="button" id="temp-down">Decrease temperature</button>
+        <button type="button" id="temp-reset">Reset temperature</button>
+        <button type="button" id="toggle-power-saving">Toggle power saving mode</button>
       </div>
-      <div id="energy" class="Medium">
-        <h3>Energy usage</h3>
-        <p>Medium</p>
-      </div>
-    </div>
-    <div class="control">
-      <button type="button" id="temp-up">Increase temperature</button>
-      <button type="button" id="temp-down">Decrease temperature</button>
-      <button type="button" id="temp-reset">Reset temperature</button>
-      <button type="button" id="toggle-power-saving">Toggle power saving mode</button>
-    </div>
-  </section>
-</body>
+    </section>
+  </body>
 </html>

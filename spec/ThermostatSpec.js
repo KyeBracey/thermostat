@@ -12,7 +12,7 @@ describe("Thermostat", function() {
     expect(thermostat.temperature()).toEqual(thermostat._DEFAULT_TEMPERATURE);
   });
 
-  it("Can increase the temperature", function(){
+  it("Can increase the temperature", function() {
     thermostat.increaseTemperature();
     expect(thermostat.temperature()).toEqual(thermostat._DEFAULT_TEMPERATURE + 1);
   });
@@ -22,9 +22,11 @@ describe("Thermostat", function() {
     expect(thermostat.temperature()).toEqual(thermostat._DEFAULT_TEMPERATURE - 1);
   });
 
-  it("Has a minimum temperature of 10", function(){
+  it("Has a minimum temperature of 10", function() {
     for(var i = 0; i < 10; i++) { thermostat.decreaseTemperature(); }
-    expect(function(){ thermostat.decreaseTemperature(); }).toThrow(new Error('Minimum temperature is 10 degrees'));
+    expect(function(){
+      thermostat.decreaseTemperature();
+    }).toThrow(new Error('Minimum temperature is 10 degrees'));
   });
 
   it("Is in power saving mode by default", function() {
@@ -59,7 +61,9 @@ describe("Thermostat", function() {
 
     it("Restrict maximum temperature to 25 degrees", function() {
       for(var i = 0; i < 5; i++) { thermostat.increaseTemperature(); }
-      expect(function(){ thermostat.increaseTemperature(); }).toThrow(new Error('Maximum temperature in power saving mode is 25 degrees'));
+      expect(function(){
+        thermostat.increaseTemperature();
+      }).toThrow(new Error('Maximum temperature in power saving mode is 25 degrees'));
     });
   });
 
@@ -68,7 +72,9 @@ describe("Thermostat", function() {
     it("Restricts maximum temperature to 32 degrees", function() {
       thermostat.togglePowerSaving();
       for(var i = 0; i < 12; i++) { thermostat.increaseTemperature(); }
-      expect(function(){ thermostat.increaseTemperature(); }).toThrow(new Error('Maximum temperature is 32 degrees'));
+      expect(function(){
+        thermostat.increaseTemperature();
+      }).toThrow(new Error('Maximum temperature is 32 degrees'));
     });
   });
 

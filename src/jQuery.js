@@ -2,7 +2,7 @@ $(document).ready(function() {
   var thermostat = new Thermostat();
 
   function updateTemperature() {
-    $('#temperature>p').text(thermostat.temperature());
+    $('#temperature > p').text(thermostat.temperature());
     $('#temperature-progress').val(thermostat.temperature() - 10)
   }
 
@@ -15,7 +15,7 @@ $(document).ready(function() {
     }
   }
 
-  function updateWeather(city){
+  function updateWeather(city) {
     var url = 'http://api.openweathermap.org/data/2.5/weather?q=';
     var city = city;
     var units = '&units=metric';
@@ -28,14 +28,14 @@ $(document).ready(function() {
   }
 
   function updateEnergyUsage() {
-    $('#energy>p').text(thermostat.currentEnergyUsage());
-    $('#energy>p').attr('class', thermostat.currentEnergyUsage());
+    $('#energy > p').text(thermostat.currentEnergyUsage());
+    $('#energy > p').attr('class', thermostat.currentEnergyUsage());
   }
 
   updateTemperature();
-
   updateWeather('London');
-  $('#temp-up').on('click', function(){
+
+  $('#temp-up').on('click', function() {
     thermostat.increaseTemperature();
     updateTemperature();
     updateEnergyUsage();
@@ -56,10 +56,10 @@ $(document).ready(function() {
   $('#toggle-power-saving').on('click', function() {
     thermostat.togglePowerSaving();
     updateTemperature();
-    $('#power_saving>p').text(updatePowerSaving());
+    $('#power_saving > p').text(updatePowerSaving());
   });
 
-  $('#select-city').submit(function(event){
+  $('#select-city').submit(function(event) {
     event.preventDefault();
     var city = $('#city').val();
     updateWeather(city);
