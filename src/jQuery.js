@@ -16,6 +16,7 @@ $(document).ready(function() {
 
   function updateEnergyUsage() {
     $('#energy>p').text(thermostat.currentEnergyUsage());
+    $('#energy>p').attr('class', thermostat.currentEnergyUsage());
   }
 
   updateTemperature();
