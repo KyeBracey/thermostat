@@ -2,9 +2,7 @@ body{
 	text-align: center;
 	font-size: 30px;
 	background: linear-gradient(to right, pink, purple, blue);
-	background-color: purple;
 }
-
 
 .Low {
   color: green;
@@ -16,4 +14,20 @@ body{
 
 .High {
   color: red;
+}
+
+progress {
+  -webkit-transform: rotate(-90deg);
+  width: 90px;
+  -webkit-appearance: none;
+	border: none;
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+  border-radius: 20px;
+  background: linear-gradient(to left, red, blue);
 }
