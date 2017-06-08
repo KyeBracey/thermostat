@@ -3,6 +3,7 @@ $(document).ready(function() {
 
   function updateTemperature() {
     $('#temperature>p').text(thermostat.temperature());
+    $('#temperature-progress').val(thermostat.temperature() - 10)
   }
 
   function updatePowerSaving() {
@@ -19,7 +20,7 @@ $(document).ready(function() {
     var city = city;
     var units = '&units=metric';
     var key = '&APPID=f0af5db9072861dc9029318af735a333';
-    $.get(url + city + units +key, function(data){
+    $.get(url + city + units + key, function(data){
       $('#current-temperature').text(data.main.temp);
     });
   }
@@ -62,7 +63,7 @@ $(document).ready(function() {
   $('#select-city').submit(function(event){
     event.preventDefault();
     var city = $('#city').val();
-      updateWeather(city);
+    updateWeather(city);
   });
 
 });
