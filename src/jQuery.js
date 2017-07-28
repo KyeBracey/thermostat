@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   function updateTemperature() {
     $('#temperature > p').text(thermostat.temperature());
-    $('#temperature-progress').val(thermostat.temperature() - 10)
+    $('#temperature-progress').val(thermostat.temperature())
   }
 
   function updatePowerSaving() {

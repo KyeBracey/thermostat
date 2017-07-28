@@ -1,11 +1,27 @@
-body{
+body {
 	text-align: center;
 	font-size: 30px;
 	background: linear-gradient(to right, pink, purple, blue);
 }
 
-h1{
+h1 {
 	margin: 20px 20px 20px 20px;
+}
+
+
+.container {
+  position: absolute;
+}
+
+.control {
+  position: absolute;
+  left: 0px;
+  width: 200px;
+}
+
+.display {
+  position: relative;
+  left: 200px;
 }
 
 .current-weather-icon{

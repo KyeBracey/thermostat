@@ -13,7 +13,7 @@
 
   </head>
   <body>
-    <section>
+    <section class="container">
       <div class="display">
         <h1>Current temperature: <span id="current-temperature"></span>&deg;C</h1>
         <h1>Weather Condition: <span id="current-weather"></span></h1>
@@ -29,8 +29,8 @@
         <div id="temperature">
           <h3>Temperature</h3>
           <p>20</p>
-          <progress id="temperature-progress" value="10" max="22"></progress>
         </div>
+        <progress id="temperature-progress" value="20" max="32"></progress>
         <div id="power_saving">
           <h3>Power Saving Mode</h3>
           <p>On</p>
@@ -40,12 +40,12 @@
           <p>Medium</p>
         </div>
       </div>
-      <div class="control">
-        <button type="button" id="temp-up">Increase temperature</button>
-        <button type="button" id="temp-down">Decrease temperature</button>
-        <button type="button" id="temp-reset">Reset temperature</button>
-        <button type="button" id="toggle-power-saving">Toggle power saving mode</button>
-      </div>
     </section>
+    <div class="control">
+      <button type="button" id="temp-up">Increase temperature</button>
+      <button type="button" id="temp-down">Decrease temperature</button>
+      <button type="button" id="temp-reset">Reset temperature</button>
+      <button type="button" id="toggle-power-saving">Toggle power saving mode</button>
+    </div>
   </body>
 </html>
